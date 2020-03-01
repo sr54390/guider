@@ -66,4 +66,13 @@
             My name is guider 
         </template>
     </category>
+    <category>
+        <pattern>how are you</pattern>
+        <template>I am good how about you?
+        <category>
+            <pattern>What are your Expertise</pattern>
+            <template>I am just good in guiding some non linear person who are distract from their tracks </template>
+        </category>
+        </template>
+    </category>
 </aiml>
