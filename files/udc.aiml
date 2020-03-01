@@ -75,4 +75,126 @@
         </category>
         </template>
     </category>
+     <category>
+      <pattern> HELLO GUIDER </pattern>
+      
+      <template>
+         Hello User
+      </template>
+      
+   </category>
+   <category>
+   <pattern> A * is a *. </pattern>
+   
+   <template>
+      When a <star index = "1"/> is not a <star index = "2"/>?
+   </template>
+   
+</category>
+ <category>
+      <pattern>I LIKE *</pattern>
+      <template>
+         I too like <star/>.
+      </template>
+   </category>
+   <category>
+   <pattern>WHO IS ALBERT EINSTEIN?</pattern>
+   <template>Albert Einstein was a German physicist.</template>
+</category>
+
+<category>
+   <pattern> WHO IS Isaac NEWTON? </pattern>
+   <template>Isaac Newton was a English physicist and mathematician.</template>
+</category>
+<category>
+   <pattern>DO YOU KNOW WHO * IS?</pattern>
+   
+   <template>
+      <srai>WHO IS <star/></srai>
+   </template>
+   
+</category>
+<category>
+   <pattern>BYE *</pattern>
+   
+   <template>
+      <srai>BYE</srai>
+   </template>
+   
+</category>
+<category>
+      <pattern> HOW ARE YOU FEELING TODAY </pattern>
+      
+      <template>
+         <think><set name = "state"> happy</set></think>
+         <condition name = "state" value = "happy">
+            I am happy!
+         </condition>
+         
+         <condition name = "state" value = "sad">
+            I am sad!
+         </condition>
+      </template>
+      
+   </category>
+   <category>
+      <pattern>My name is *</pattern>
+      <template>
+         Hello!<think><set name = "username"> <star/></set></think>
+      </template>  
+   </category>  
+   
+   <category>
+      <pattern>Byeee</pattern>
+      <template>
+         Hi <get name = "username"/> Thanks for the conversation!
+      </template>  
+   </category>  
+    <category>
+      <pattern>LET DISCUSS MOVIES</pattern>
+      <template>Yes <set name = "topic">movies</set></template>  
+   </category>
+   
+   <topic name = "movies">
+      <category>
+         <pattern> * </pattern>
+         <template>Watching good movie refreshes our minds.</template>
+      </category>
+      
+      <category>
+         <pattern> I LIKE WATCHING COMEDY! </pattern>
+         <template>I like comedy movies too.</template>
+      </category>
+      
+   </topic>
+   <category>
+      <pattern>WHAT ABOUT MOVIES</pattern>
+      <template>Do you like comedy movies</template>  
+   </category>
+   
+   <category>
+      <pattern>YES</pattern>
+      <that>Do you like comedy movies</that>
+      <template>Nice, I like comedy movies too.</template>
+   </category>
+   
+   <category>
+      <pattern>NO</pattern>
+      <that>Do you like comedy movies</that>
+      <template>Ok! But I like comedy movies.</template>
+   </category> 
+    <category>
+      <pattern>I am *</pattern>
+      <template>
+         Hello <set name = "username"> <star/>! </set>
+      </template>  
+   </category>  
+   
+   <category>
+      <pattern>Good Night</pattern>
+      <template>
+         Hi <get name = "username"/> Thanks for the conversation!
+      </template>  
+   </category>  
+   
 </aiml>
